@@ -6,8 +6,8 @@ import androidx.compose.ui.res.stringResource
 import com.lyang25.catapp.R
 
 @Composable
-fun SettingScreen(
-    navToHomeScreen: () -> Unit = {},
+fun WebViewScreen(
+    
 ) {
-    Text(text = stringResource(id = R.string.settings))
+    Text(text = stringResource(id = R.string.webview))
 }
