@@ -1,5 +1,8 @@
 package com.lyang25.catapp.ui.screens.catapi
 
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,6 +21,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -40,6 +44,12 @@ fun MainScreen(
     var isEnabled by remember { mutableStateOf(false) }
     var selectedCat by remember { mutableStateOf("") }
     var address by remember { mutableStateOf(CatApp.DEFAULT_IMAGE_URL) }
+
+    val flip by animateFloatAsState(
+        targetValue = if (!isEnabled) 180f else 0f,
+        animationSpec = tween(CatApp.FLIP_DURATION, easing = FastOutSlowInEasing),
+        label = "flip"
+    )
 
     if (selectedCat.isNotEmpty() && catUiState.showsDetail) {
         DetailScreen(
@@ -71,6 +81,9 @@ fun MainScreen(
                 AsyncImage(
                     modifier = Modifier
                         .weight(4f)
+                        .graphicsLayer {
+                            rotationY = flip
+                        }
                         .clickable(enabled = isEnabled) {
                             showDetail()
                         },
@@ -116,7 +129,7 @@ fun MainScreen(
                             onGo(Random.nextInt(1,67))
                             address = catUiState.catImg
                             selectedCat = catUiState.catName
-                            isEnabled = true
+                            isEnabled = false
                         },
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color.hsl(314f, 1f, 0.216f),

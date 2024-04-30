@@ -13,7 +13,6 @@
     <string name="catname">Nom de Chat</string>
     <string name="type">Genre</string>
     <string name="personality">Personnalité</string>
-    <string name="personality">personnalité</string>
     <string name="description">Description</string>
     <string name="back">Retourner</string>
     <string name="switchmemento">Afficher le Souvenir Descriptif</string>

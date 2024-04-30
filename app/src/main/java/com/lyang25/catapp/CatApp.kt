@@ -14,6 +14,8 @@ class CatApp : Application() {
 
         const val DEFAULT_IMAGE_URL = "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg"
         const val DEFAULT_NEKO_URL = "https://api.neko-atsume.emshea.com/"
+
+        const val FLIP_DURATION = 400
     }
 
     override fun onCreate() {
