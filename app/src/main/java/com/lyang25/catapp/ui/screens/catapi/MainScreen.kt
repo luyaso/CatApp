@@ -37,7 +37,7 @@ fun MainScreen(
     hideDetail: () -> Unit,
 ) {
 
-    var isEnabled by remember { mutableStateOf(false) }
+    var isEnabled by remember { mutableStateOf(true) }
     var selectedCat by remember { mutableStateOf("") }
     var address by remember { mutableStateOf(CatApp.DEFAULT_IMAGE_URL) }
 

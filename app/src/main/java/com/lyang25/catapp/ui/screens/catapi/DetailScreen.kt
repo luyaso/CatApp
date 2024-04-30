@@ -49,6 +49,7 @@ fun DetailScreen(
             contentDescription = null,
             placeholder = painterResource(id = R.drawable.shutter_reverse)
         )
+        if (catUiState.showMemento) Text(text = catUiState.cat.Memento)
 
         Column (
             modifier = Modifier

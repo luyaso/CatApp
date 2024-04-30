@@ -25,7 +25,6 @@ class CatViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(CatUiState())
     val uiState: StateFlow<CatUiState> = _uiState
 
-
     fun fetchACat(catNum: Int) {
 
         _uiState.value = _uiState.value.copy(
@@ -54,6 +53,12 @@ class CatViewModel : ViewModel() {
             }
         })
     }
+
+    fun switchMemento(truth: Boolean) {
+        _uiState.value = _uiState.value.copy(
+            showMemento = truth
+        )
+    }
 }
 
 data class CatUiState(
@@ -62,4 +67,5 @@ data class CatUiState(
     val catName: String = "",
     val catImg: String = "",
     val showsDetail: Boolean = false,
+    val showMemento: Boolean = false,
 )

@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -22,15 +23,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.lyang25.catapp.ui.screens.HomeScreen
 import com.lyang25.catapp.ui.screens.InfoScreen
-import com.lyang25.catapp.ui.screens.SettingScreen
-import com.lyang25.catapp.ui.screens.WebViewScreen
 import com.lyang25.catapp.ui.screens.catapi.CatViewModel
 import com.lyang25.catapp.ui.screens.catapi.DetailScreen
 import com.lyang25.catapp.ui.screens.catapi.MainScreen
+import com.lyang25.catapp.ui.screens.catscroll.CatScrollScreen
+import com.lyang25.catapp.ui.screens.catscroll.ScrollViewModel
+import com.lyang25.catapp.ui.screens.settings.SettingScreen
 
 object Route {
     const val HOME = "Home"
-    const val WEB = "Web"
+    const val SCROLL = "Scroll"
     const val SETTINGS = "Settings"
     const val INFO = "Info"
     const val CATAPI = "CatAPI"
@@ -50,9 +52,9 @@ val DESTINATIONS = listOf(
         icon = R.drawable.home
     ),
     Destination(
-        route = Route.WEB,
-        textId = R.string.webview,
-        icon = R.drawable.webview
+        route = Route.SCROLL,
+        textId = R.string.scroll,
+        icon = R.drawable.star
     ),
     Destination(
         route = Route.CATAPI,
@@ -80,11 +82,15 @@ val DESTINATIONS = listOf(
 @Composable
 fun CatNav(
     catViewModel: CatViewModel,
+    scrollViewModel: ScrollViewModel,
+    readFromFile: MutableState<Boolean>,
+    refresh: () -> Unit,
     //need more vms?
 ) {
 
     val destination = remember { mutableStateOf(Route.HOME) } // in real life should be HOME
 
+    val scrollUiState by scrollViewModel.uiState.collectAsState()
     val catUiState by catViewModel.uiState.collectAsState()
 
     Scaffold(
@@ -133,8 +139,11 @@ fun CatNav(
                     )
                 }
 
-                Route.WEB -> {
-                    WebViewScreen()
+                Route.SCROLL -> {
+                    CatScrollScreen(
+                        scrollUiState = scrollUiState,
+                        refresh = refresh
+                    )
                 }
 
                 Route.INFO -> {
@@ -145,7 +154,10 @@ fun CatNav(
 
                 Route.SETTINGS -> {
                     SettingScreen(
-                        navToHomeScreen = { destination.value = Route.HOME }
+                        catViewModel = catViewModel,
+                        catUiState = catUiState,
+                        navToHomeScreen = { destination.value = Route.HOME },
+                        readFromFile = readFromFile
                     )
                 }
                 

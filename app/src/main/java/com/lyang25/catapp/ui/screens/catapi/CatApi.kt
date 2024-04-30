@@ -11,4 +11,6 @@ interface CatApi {
         @Path("catNum") catNum: Int,
     ): Call<Cat>
 
+    @GET("cats/")
+    fun fetchAllCats(): Call<List<Cat>>
 }

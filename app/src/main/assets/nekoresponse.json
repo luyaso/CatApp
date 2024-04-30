@@ -1,0 +1,112 @@
+[
+  {
+    "CatId": "1",
+    "CatName": "Snowball",
+    "CatDescription": "Solid White",
+    "CatPersonality": "Mellow",
+    "CatPowerLevel": "80",
+    "CatType": "Common",
+    "Memento": "Flowered Collar",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Snowball.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Flowered+Collar.jpg"
+  },
+  {
+    "CatId": "2",
+    "CatName": "Smokey",
+    "CatDescription": "Solid Black",
+    "CatPersonality": "Hot and Cold",
+    "CatPowerLevel": "140",
+    "CatType": "Common",
+    "Memento": "Soft Brush",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Smokey.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Soft+Brush.jpg"
+  },
+  {
+    "CatId": "3",
+    "CatName": "Spots",
+    "CatDescription": "Black & White",
+    "CatPersonality": "Joker",
+    "CatPowerLevel": "75",
+    "CatType": "Common",
+    "Memento": "Glow Bracelet",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Spots.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Glow+Bracelet.jpg"
+  },
+  {
+    "CatId": "4",
+    "CatName": "Shadow",
+    "CatDescription": "Solid Grey",
+    "CatPersonality": "Peculiar",
+    "CatPowerLevel": "50",
+    "CatType": "Common",
+    "Memento": "Cicada Skin",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Shadow.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Cicada+Skin.jpg"
+  },
+  {
+    "CatId": "5",
+    "CatName": "Sunny",
+    "CatDescription": "Turkish Calico",
+    "CatPersonality": "Mischievous",
+    "CatPowerLevel": "120",
+    "CatType": "Common",
+    "Memento": "Shiny Acorn",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Sunny.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Shiny+Acorn.jpg"
+  },
+  {
+    "CatId": "6",
+    "CatName": "Fred",
+    "CatDescription": "Orange Tabby",
+    "CatPersonality": "Lady-Killer",
+    "CatPowerLevel": "150",
+    "CatType": "Common",
+    "Memento": "Seashell Earring",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Fred.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Seashell+Earring.jpg"
+  },
+  {
+    "CatId": "7",
+    "CatName": "Pumpkin",
+    "CatDescription": "Orange & White Tabby",
+    "CatPersonality": "Spacey",
+    "CatPowerLevel": "90",
+    "CatType": "Common",
+    "Memento": "Aluminum Pins",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Pumpkin.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Aluminum+Pins.jpg"
+  },
+  {
+    "CatId": "8",
+    "CatName": "Callie",
+    "CatDescription": "Calico",
+    "CatPersonality": "Carefree",
+    "CatPowerLevel": "50",
+    "CatType": "Common",
+    "Memento": "Damp Matchbox",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Callie.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Damp+Matchbox.jpg"
+  },
+  {
+    "CatId": "9",
+    "CatName": "Tabitha",
+    "CatDescription": "Calico Tabby",
+    "CatPersonality": "Leisurely",
+    "CatPowerLevel": "40",
+    "CatType": "Common",
+    "Memento": "Random Seeds",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Tabitha.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Random+Seeds.jpg"
+  },
+  {
+    "CatId": "10",
+    "CatName": "Bandit",
+    "CatDescription": "Tortoiseshell",
+    "CatPersonality": "Wild at Heart",
+    "CatPowerLevel": "180",
+    "CatType": "Common",
+    "Memento": "Teaser Toy TIp",
+    "CatImage": "https://neko-atsume.s3.amazonaws.com/img/Bandit.jpg",
+    "MementoImage": "https://neko-atsume.s3.amazonaws.com/img/Teaser+Toy+TIp.jpg"
+  }
+]

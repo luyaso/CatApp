@@ -9,9 +9,10 @@ class Cat {
     var CatPersonality: String = ""
     var CatType: String = ""
     var CatImage: String = CatApp.DEFAULT_IMAGE_URL
+    var Memento: String = ""
     var MementoImage: String = ""
 }
 
 class CatResponse {
-    val cat: Cat? = null
+    val cat: Cat = Cat()
 }

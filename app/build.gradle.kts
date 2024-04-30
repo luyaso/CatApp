@@ -12,6 +12,9 @@ val tcaProperties: Properties by lazy {
     }
 }
 
+val millisInMinute = 1000 * 60
+val minutesSinceEpoch = System.currentTimeMillis() / millisInMinute
+
 android {
     namespace = "com.lyang25.catapp"
     compileSdk = 34
@@ -25,6 +28,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "apikey", "${tcaProperties["apikey"]}")
+        buildConfigField("int", "BUILD_TIME", "$minutesSinceEpoch")
 
         vectorDrawables {
             useSupportLibrary = true
