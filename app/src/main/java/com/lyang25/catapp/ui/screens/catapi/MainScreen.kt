@@ -41,7 +41,7 @@ fun MainScreen(
     var selectedCat by remember { mutableStateOf("") }
     var address by remember { mutableStateOf(CatApp.DEFAULT_IMAGE_URL) }
 
-    if (!selectedCat.isEmpty() && catUiState.showsDetail) {
+    if (selectedCat.isNotEmpty() && catUiState.showsDetail) {
         DetailScreen(
             catUiState = catUiState,
             hideDetail = hideDetail,

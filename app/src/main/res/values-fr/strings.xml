@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppMiaou</string>
+    <string name="home">But</string>
+    <string name="scroll">Vue Défilante</string>
+    <string name="settings">Paramètres</string>
+    <string name="info">Info</string>
+    <string name="catapi">Chat API</string>
+    <string name="select_cat">Cliquez sur le bouton ALLER pour générer un chat!</string>
+    <string name="go">ALLER</string>
+    <string name="kittycat">MinouMiaou</string>
+    <string name="catdetail">Détail du Chat</string>
+    <string name="catname">Nom de Chat</string>
+    <string name="type">Genre</string>
+    <string name="personality">Personnalité</string>
+    <string name="personality">personnalité</string>
+    <string name="description">Description</string>
+    <string name="back">Retourner</string>
+    <string name="switchmemento">Afficher le Souvenir Descriptif</string>
+    <string name="readfromfile">Lire à Partir d\'un Fichier</string>
+</resources>

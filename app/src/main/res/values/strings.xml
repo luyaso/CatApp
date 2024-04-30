@@ -16,5 +16,5 @@
     <string name="back">Back</string>
     <string name="switchmemento">Show Memento Description</string>
     <string name="readfromfile">Read from File</string>
-    <string name="author">Lucy Yang | lyang25@u.rochester.edu</string>
+    <string name="author" translatable="false">Lucy Yang | lyang25@u.rochester.edu</string>
 </resources>
