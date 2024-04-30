@@ -37,7 +37,7 @@ fun MainScreen(
     hideDetail: () -> Unit,
 ) {
 
-    var isEnabled by remember { mutableStateOf(true) }
+    var isEnabled by remember { mutableStateOf(false) }
     var selectedCat by remember { mutableStateOf("") }
     var address by remember { mutableStateOf(CatApp.DEFAULT_IMAGE_URL) }
 
@@ -52,6 +52,9 @@ fun MainScreen(
         }
         catUiState.catName.let { newName ->
             selectedCat = newName
+        }
+        if (catUiState.cat.CatId != 0) {
+            isEnabled = true
         }
 
         Column (
