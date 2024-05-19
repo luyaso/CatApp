@@ -27,7 +27,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "apikey", "${tcaProperties["apikey"]}")
+        // unused api key call
+        // buildConfigField("String", "apikey", "${tcaProperties["apikey"]}")
         buildConfigField("int", "BUILD_TIME", "$minutesSinceEpoch")
 
         vectorDrawables {
